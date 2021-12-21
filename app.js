@@ -39,6 +39,11 @@ search.addWidgets([
   instantsearch.widgets.pagination({
     container: '#pagination',
   }),
+  instantsearch.widgets.stats({
+    container: '#stats',
+  }),
 ]);
+
+
 
 search.start();
