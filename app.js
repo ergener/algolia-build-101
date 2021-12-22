@@ -44,6 +44,25 @@ search.addWidgets([
   }),
 ]);
 
-
+search.addWidgets([
+  instantsearch.widgets.hierarchicalMenu({
+    container: '#categories',
+    attributes: [
+      "hierarchicalCategories.lvl0",
+      "hierarchicalCategories.lvl1",
+      "hierarchicalCategories.lvl2"]
+  }),
+  instantsearch.widgets.rangeInput({
+    container: '#price-range',
+    attribute: 'price',
+    templates:{
+      submitText(){
+        return "filter"
+      }
+    },
+//    min:100,
+//    max:400
+  }),
+]);
 
 search.start();
